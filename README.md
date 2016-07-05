@@ -1,0 +1,2 @@
+# SmartMeasuringWithTimeSynchronization
+Use a smart meter and timeSynchronizationTogether
