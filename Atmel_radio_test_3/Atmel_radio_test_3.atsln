@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Atmel_radio_test_3", "Atmel_radio_test_3.cppproj", "{BBC19752-0A1E-4A42-9FF8-4D877F036BED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBC19752-0A1E-4A42-9FF8-4D877F036BED}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BBC19752-0A1E-4A42-9FF8-4D877F036BED}.Debug|ARM.Build.0 = Debug|ARM
+		{BBC19752-0A1E-4A42-9FF8-4D877F036BED}.Release|ARM.ActiveCfg = Release|ARM
+		{BBC19752-0A1E-4A42-9FF8-4D877F036BED}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
