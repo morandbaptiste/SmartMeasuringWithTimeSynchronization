@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>6.2</ProjectVersion>
     <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
-    <ProjectGuid>{BBC19752-0A1E-4A42-9FF8-4D877F036BED}</ProjectGuid>
+    <ProjectGuid>{70475F15-7765-40E1-916A-C2A1FC467E52}</ProjectGuid>
     <avrdevice>ATSAMR21G18A</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -48,9 +48,9 @@
     <ListValues>
       <Value>NDEBUG</Value>
       <Value>TARGET_Atmel</Value> 
-      <Value>MBED_BUILD_TIMESTAMP=1467657936.81</Value> 
       <Value>TOOLCHAIN_GCC_ARM</Value> 
       <Value>TOOLCHAIN_GCC</Value> 
+      <Value>MBED_BUILD_TIMESTAMP=1467799861.99</Value> 
       <Value>TARGET_SAM_CortexM0P</Value> 
       <Value>EXTINT_CALLBACK_MODE=true</Value> 
       <Value>TARGET_LIKE_MBED</Value> 
@@ -74,6 +74,15 @@
       <Value>../.</Value> 
       <Value>.././MxRadioRF2xx</Value> 
       <Value>.././MxRadioRF2xx/uracolib</Value> 
+      <Value>.././config</Value> 
+      <Value>.././freertos-7-4-2</Value> 
+      <Value>.././freertos-7-4-2/Source</Value> 
+      <Value>.././freertos-7-4-2/Source/portable</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC/ARM_CM0</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/MemMang</Value> 
+      <Value>.././freertos-7-4-2/Source/include</Value> 
+      <Value>.././network</Value> 
       <Value>.././mbed</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A/TARGET_Atmel</Value> 
@@ -123,9 +132,9 @@
     <ListValues>
       <Value>NDEBUG</Value>
       <Value>TARGET_Atmel</Value> 
-      <Value>MBED_BUILD_TIMESTAMP=1467657936.81</Value> 
       <Value>TOOLCHAIN_GCC_ARM</Value> 
       <Value>TOOLCHAIN_GCC</Value> 
+      <Value>MBED_BUILD_TIMESTAMP=1467799861.99</Value> 
       <Value>TARGET_SAM_CortexM0P</Value> 
       <Value>EXTINT_CALLBACK_MODE=true</Value> 
       <Value>TARGET_LIKE_MBED</Value> 
@@ -149,6 +158,15 @@
       <Value>../.</Value> 
       <Value>.././MxRadioRF2xx</Value> 
       <Value>.././MxRadioRF2xx/uracolib</Value> 
+      <Value>.././config</Value> 
+      <Value>.././freertos-7-4-2</Value> 
+      <Value>.././freertos-7-4-2/Source</Value> 
+      <Value>.././freertos-7-4-2/Source/portable</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC/ARM_CM0</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/MemMang</Value> 
+      <Value>.././freertos-7-4-2/Source/include</Value> 
+      <Value>.././network</Value> 
       <Value>.././mbed</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A/TARGET_Atmel</Value> 
@@ -210,6 +228,15 @@
       <Value>../.</Value> 
       <Value>.././MxRadioRF2xx</Value> 
       <Value>.././MxRadioRF2xx/uracolib</Value> 
+      <Value>.././config</Value> 
+      <Value>.././freertos-7-4-2</Value> 
+      <Value>.././freertos-7-4-2/Source</Value> 
+      <Value>.././freertos-7-4-2/Source/portable</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC/ARM_CM0</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/MemMang</Value> 
+      <Value>.././freertos-7-4-2/Source/include</Value> 
+      <Value>.././network</Value> 
       <Value>.././mbed</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A/TARGET_Atmel</Value> 
@@ -266,9 +293,9 @@
     <ListValues>
       <Value>DEBUG</Value>
       <Value>TARGET_Atmel</Value>
-      <Value>MBED_BUILD_TIMESTAMP=1467657936.81</Value>
       <Value>TOOLCHAIN_GCC_ARM</Value>
       <Value>TOOLCHAIN_GCC</Value>
+      <Value>MBED_BUILD_TIMESTAMP=1467799861.99</Value>
       <Value>TARGET_SAM_CortexM0P</Value>
       <Value>EXTINT_CALLBACK_MODE=true</Value>
       <Value>TARGET_LIKE_MBED</Value>
@@ -292,6 +319,15 @@
       <Value>../.</Value> 
       <Value>.././MxRadioRF2xx</Value> 
       <Value>.././MxRadioRF2xx/uracolib</Value> 
+      <Value>.././config</Value> 
+      <Value>.././freertos-7-4-2</Value> 
+      <Value>.././freertos-7-4-2/Source</Value> 
+      <Value>.././freertos-7-4-2/Source/portable</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC/ARM_CM0</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/MemMang</Value> 
+      <Value>.././freertos-7-4-2/Source/include</Value> 
+      <Value>.././network</Value> 
       <Value>.././mbed</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A/TARGET_Atmel</Value> 
@@ -342,9 +378,9 @@
     <ListValues>
       <Value>DEBUG</Value>
       <Value>TARGET_Atmel</Value> 
-      <Value>MBED_BUILD_TIMESTAMP=1467657936.81</Value> 
       <Value>TOOLCHAIN_GCC_ARM</Value> 
       <Value>TOOLCHAIN_GCC</Value> 
+      <Value>MBED_BUILD_TIMESTAMP=1467799861.99</Value> 
       <Value>TARGET_SAM_CortexM0P</Value> 
       <Value>EXTINT_CALLBACK_MODE=true</Value> 
       <Value>TARGET_LIKE_MBED</Value> 
@@ -368,6 +404,15 @@
       <Value>../.</Value> 
       <Value>.././MxRadioRF2xx</Value> 
       <Value>.././MxRadioRF2xx/uracolib</Value> 
+      <Value>.././config</Value> 
+      <Value>.././freertos-7-4-2</Value> 
+      <Value>.././freertos-7-4-2/Source</Value> 
+      <Value>.././freertos-7-4-2/Source/portable</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC/ARM_CM0</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/MemMang</Value> 
+      <Value>.././freertos-7-4-2/Source/include</Value> 
+      <Value>.././network</Value> 
       <Value>.././mbed</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A/TARGET_Atmel</Value> 
@@ -431,6 +476,15 @@
       <Value>../.</Value> 
       <Value>.././MxRadioRF2xx</Value> 
       <Value>.././MxRadioRF2xx/uracolib</Value> 
+      <Value>.././config</Value> 
+      <Value>.././freertos-7-4-2</Value> 
+      <Value>.././freertos-7-4-2/Source</Value> 
+      <Value>.././freertos-7-4-2/Source/portable</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/GCC/ARM_CM0</Value> 
+      <Value>.././freertos-7-4-2/Source/portable/MemMang</Value> 
+      <Value>.././freertos-7-4-2/Source/include</Value> 
+      <Value>.././network</Value> 
       <Value>.././mbed</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A</Value> 
       <Value>.././mbed/TARGET_SAMR21G18A/TARGET_Atmel</Value> 
@@ -477,46 +531,80 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="freertos-7-4-2/Source" />
+    <Folder Include="freertos-7-4-2/Source/portable/GCC/ARM_CM0" />
+    <Folder Include="freertos-7-4-2/Source/portable/MemMang" />
     <Folder Include="MxRadioRF2xx" />
     <Folder Include="MxRadioRF2xx/uracolib" />
+    <Folder Include="network" />
     
-    <Compile Include="main.cpp">
+    <Compile Include="freertos-7-4-2/Source/queue.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MxRadioRF2xx/MxRadio.cpp">
+    <Compile Include="freertos-7-4-2/Source/croutine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="freertos-7-4-2/Source/list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="freertos-7-4-2/Source/tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="freertos-7-4-2/Source/timers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="freertos-7-4-2/Source/portable/GCC/ARM_CM0/port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="freertos-7-4-2/Source/portable/MemMang/heap_1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MxRadioRF2xx/MxRadio_Events.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_radio_rf230.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_datarate.cpp">
+    <Compile Include="MxRadioRF2xx/MxRadio.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_bitrd.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_bitwr.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_frame.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_irq.cpp">
+    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_radio_rf230.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_misc.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_param.cpp">
+    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_bitrd.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_datarate.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_irq.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_sram.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_bitwr.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_param.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MxRadioRF2xx/uracolib/MxRadio_trx_rf230_frame.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="network/channelradio.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="network/channelserial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="network/relay.cpp">
       <SubType>compile</SubType>
     </Compile>
     

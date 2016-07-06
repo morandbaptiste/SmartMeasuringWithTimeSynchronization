@@ -123,14 +123,27 @@ main.d main.o: .././main.cpp .././mbed/mbed.h .././mbed/platform.h \
  .././mbed/LowPowerTicker.h .././mbed/LowPowerTimer.h \
  .././mbed/LocalFileSystem.h .././mbed/InterruptIn.h \
  .././mbed/gpio_irq_api.h .././mbed/wait_api.h .././mbed/sleep_api.h \
- .././mbed/rtc_time.h .././channelserial.h .././channel.h \
- .././channelradio.h .././MxRadioRF2xx/MxRadio.h \
+ .././mbed/rtc_time.h ../uTask/utask.h ../SmartMeater/SmartMeter.h \
+ .././network/channelserial.h .././network/channel.h \
+ .././network/channelradio.h .././MxRadioRF2xx/MxRadio.h \
  .././MxRadioRF2xx/uracolib/board.h .././MxRadioRF2xx/uracolib/const.h \
  .././MxRadioRF2xx/uracolib/../MxRadioCfg.h \
  .././MxRadioRF2xx/uracolib/at86rf231.h .././MxRadioRF2xx/MxRadioCfg.h \
  .././MxRadioRF2xx/uracolib/radio.h \
  .././MxRadioRF2xx/uracolib/transceiver.h \
- .././MxRadioRF2xx/uracolib/board.h .././relay.h
+ .././MxRadioRF2xx/uracolib/board.h .././network/relay.h \
+ .././freertos-7-4-2/Source/include/FreeRTOS.h \
+ .././freertos-7-4-2/Source/include/projdefs.h \
+ .././config/FreeRTOSConfig.h \
+ .././freertos-7-4-2/Source/include/portable.h \
+ .././freertos-7-4-2/Source/portable/GCC/ARM_CM0/portmacro.h \
+ .././freertos-7-4-2/Source/include/mpu_wrappers.h \
+ .././freertos-7-4-2/Source/include/semphr.h \
+ .././freertos-7-4-2/Source/include/queue.h \
+ .././freertos-7-4-2/Source/include/task.h \
+ .././freertos-7-4-2/Source/include/list.h \
+ .././config/conf_timeProtocol.h ../HMI/hmi.h \
+ .././freertos-7-4-2/Source/include/queue.h
 
 .././mbed/mbed.h:
 
@@ -458,11 +471,15 @@ main.d main.o: .././main.cpp .././mbed/mbed.h .././mbed/platform.h \
 
 .././mbed/rtc_time.h:
 
-.././channelserial.h:
+../uTask/utask.h:
 
-.././channel.h:
+../SmartMeater/SmartMeter.h:
 
-.././channelradio.h:
+.././network/channelserial.h:
+
+.././network/channel.h:
+
+.././network/channelradio.h:
 
 .././MxRadioRF2xx/MxRadio.h:
 
@@ -482,4 +499,30 @@ main.d main.o: .././main.cpp .././mbed/mbed.h .././mbed/platform.h \
 
 .././MxRadioRF2xx/uracolib/board.h:
 
-.././relay.h:
+.././network/relay.h:
+
+.././freertos-7-4-2/Source/include/FreeRTOS.h:
+
+.././freertos-7-4-2/Source/include/projdefs.h:
+
+.././config/FreeRTOSConfig.h:
+
+.././freertos-7-4-2/Source/include/portable.h:
+
+.././freertos-7-4-2/Source/portable/GCC/ARM_CM0/portmacro.h:
+
+.././freertos-7-4-2/Source/include/mpu_wrappers.h:
+
+.././freertos-7-4-2/Source/include/semphr.h:
+
+.././freertos-7-4-2/Source/include/queue.h:
+
+.././freertos-7-4-2/Source/include/task.h:
+
+.././freertos-7-4-2/Source/include/list.h:
+
+.././config/conf_timeProtocol.h:
+
+../HMI/hmi.h:
+
+.././freertos-7-4-2/Source/include/queue.h:
