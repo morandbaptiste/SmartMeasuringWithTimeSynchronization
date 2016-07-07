@@ -7,7 +7,7 @@
 #include "SmartMeter.h"
 #include <FreeRTOS.h>
 #include <semphr.h>
-
+#include <timeProtocol.h>
 void PrintBuffer(Channel* c, char* buffer, size_t length=0)
 {
 	if(c && buffer)
@@ -30,6 +30,8 @@ void PrintBuffer(Channel* c, char* buffer, size_t length=0)
 	}
 }
 
+//extern xSemaphoreHandle timeProt.synchroTimeReceive;
+
 void smartMeterTask(void){
 	
 	xSemaphoreHandle synchroSmartMeter;
@@ -39,15 +41,15 @@ void smartMeterTask(void){
 	Channel* s1 = new ChannelSerialSercom1;
 	ChannelCallback* relaytos1 = new Relay(s1);
 	ChannelCallback* relaytopc = new Relay(pc);
-	RelayBuffered* relaybtopc = new RelayBufferedTask(pc,synchroSmartMeter,'\x03');
-	RelayBuffered* relaybtos1 = new RelayBufferedTask(s1,synchroSmartMeter,'\x03');
+	RelayBuffered* relaybtopc = new RelayBufferedTaskCLP(pc,synchroSmartMeter,timeProt.synchroTimeReceive);
+	RelayBuffered* relaybtos1 = new RelayBufferedTaskCLP(s1,synchroSmartMeter,timeProt.synchroTimeReceive);
 	
 	ChannelRadio* radio = ChannelRadio::GetChannel();
 	cMxRadio* r = radio->GetRadio();
 	// Radio Config
-	r->begin(11);
+	r->begin(CHANNEL_RADIO);
 	
-	RelayBuffered* relaybtoradio = new RelayBufferedTask(radio,synchroSmartMeter,'\x03');
+	RelayBuffered* relaybtoradio = new RelayBufferedTaskCLP(radio,synchroSmartMeter,timeProt.synchroTimeReceive);
 	
 	pc->SetCallback(relaybtoradio);
 #ifdef MASTERMODE

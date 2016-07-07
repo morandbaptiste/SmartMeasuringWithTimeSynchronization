@@ -13,6 +13,7 @@
 #include <stddef.h>
 #include <FreeRTOS.h>
 #include <semphr.h>
+#include <timeProtocol.h>
 
 #define RELAY_BUFFER_SIZE 300
 
@@ -58,9 +59,21 @@ public:
 	
 	virtual ~RelayBufferedTask();
 	
-	void OnReceive(Channel* c);
+	virtual void OnReceive(Channel* c);
 	
 };
 
+class RelayBufferedTaskCLP : public RelayBufferedTask
+{
+protected:
+    xSemaphoreHandle synchroTimeSync;
+	
+public:
+	RelayBufferedTaskCLP(Channel* out, xSemaphoreHandle synchroMeter, xSemaphoreHandle synchroTime);
+	
+	virtual ~RelayBufferedTaskCLP();
+	
+	virtual void OnReceive(Channel* c);
+};
 
 #endif /* RELAY_H_ */

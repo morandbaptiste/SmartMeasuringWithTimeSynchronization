@@ -73,14 +73,40 @@
 /* === Includes ============================================================ */
 #include <MxRadio.h>
 
+cMxRadio* gRadio = NULL;
 
+void IRQradio(void){
+	gRadio->rf_irq_callback();
+}
 /* === external functions =================================================== */
 void cMxRadio::trx_io_init (int spirate)
 {
+
 	m_cs = 1;
 	m_spi.format(8, 0);
 	m_spi.frequency(spirate);
-	irq_pin.rise(this,&cMxRadio::rf_irq_callback);
+	/////////////////////////////////////////////////////////////////////
+	/////modification BM irq_pin.rise(this,&cMxRadio::rf_irq_callback);
+	//////////////////////////////////////////////////////////////////////
+	struct extint_chan_conf eint_chan_conf;
+	extint_chan_get_config_defaults(&eint_chan_conf);
+	// put the button as EXTINT
+	eint_chan_conf.gpio_pin           = PIN_PB00A_EIC_EXTINT0;
+	eint_chan_conf.gpio_pin_mux       = MUX_PB00A_EIC_EXTINT0 ;
+	eint_chan_conf.detection_criteria = EXTINT_DETECT_RISING;
+	eint_chan_conf.filter_input_signal = false;
+		
+	extint_chan_set_config(0, &eint_chan_conf);
+	//configuration callback
+	gRadio = this;
+	extint_register_callback(&IRQradio,0,EXTINT_CALLBACK_TYPE_DETECT);
+	//InterruptManager::get()->add_handler(ppsISR, EIC_IRQn);
+	//ppsIsrr.attach(&ppsISR);
+	//activation callback
+		extint_chan_enable_callback(0,EXTINT_CALLBACK_TYPE_DETECT);		
+	////////////////////////////////////////////////////////////////////////////////
+	//end modification
+	////////////////////////////////////////////////////////////////////////////////
 
 	/* set the SLPTR and RESET
 	TRX_RESET_INIT();

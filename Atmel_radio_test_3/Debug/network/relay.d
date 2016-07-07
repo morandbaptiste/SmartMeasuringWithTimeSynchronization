@@ -78,7 +78,8 @@ network/relay.d network/relay.o: ../network/relay.cpp ../network/relay.h \
  .././freertos-7-4-2/Source/portable/GCC/ARM_CM0/portmacro.h \
  .././freertos-7-4-2/Source/include/mpu_wrappers.h \
  .././freertos-7-4-2/Source/include/semphr.h \
- .././freertos-7-4-2/Source/include/queue.h .././mbed/mbed.h \
+ .././freertos-7-4-2/Source/include/queue.h \
+ ../time/TimeProtocol/timeProtocol.h ../HMI/hmi.h .././mbed/mbed.h \
  .././mbed/platform.h \
  .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/TARGET_SAM_CortexM0P/TARGET_SAMR21G18A/device.h \
  .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/TARGET_SAM_CortexM0P/objects.h \
@@ -132,7 +133,19 @@ network/relay.d network/relay.o: ../network/relay.cpp ../network/relay.h \
  .././mbed/LowPowerTicker.h .././mbed/LowPowerTimer.h \
  .././mbed/LocalFileSystem.h .././mbed/InterruptIn.h \
  .././mbed/gpio_irq_api.h .././mbed/wait_api.h .././mbed/sleep_api.h \
- .././mbed/rtc_time.h
+ .././mbed/rtc_time.h .././freertos-7-4-2/Source/include/task.h \
+ .././freertos-7-4-2/Source/include/list.h \
+ .././freertos-7-4-2/Source/include/queue.h \
+ .././config/conf_timeProtocol.h ../time/timeManager.h \
+ ../time/internalClock/internalClock.h ../clp/clp.h ../clp/clp_api.h \
+ ../clp/clp_api_ext.h .././network/channelradio.h .././network/channel.h \
+ .././MxRadioRF2xx/MxRadio.h .././MxRadioRF2xx/uracolib/board.h \
+ .././MxRadioRF2xx/uracolib/const.h \
+ .././MxRadioRF2xx/uracolib/../MxRadioCfg.h \
+ .././MxRadioRF2xx/uracolib/at86rf231.h .././MxRadioRF2xx/MxRadioCfg.h \
+ .././MxRadioRF2xx/uracolib/radio.h \
+ .././MxRadioRF2xx/uracolib/transceiver.h \
+ .././MxRadioRF2xx/uracolib/board.h
 
 ../network/relay.h:
 
@@ -299,6 +312,10 @@ network/relay.d network/relay.o: ../network/relay.cpp ../network/relay.h \
 .././freertos-7-4-2/Source/include/semphr.h:
 
 .././freertos-7-4-2/Source/include/queue.h:
+
+../time/TimeProtocol/timeProtocol.h:
+
+../HMI/hmi.h:
 
 .././mbed/mbed.h:
 
@@ -479,3 +496,43 @@ network/relay.d network/relay.o: ../network/relay.cpp ../network/relay.h \
 .././mbed/sleep_api.h:
 
 .././mbed/rtc_time.h:
+
+.././freertos-7-4-2/Source/include/task.h:
+
+.././freertos-7-4-2/Source/include/list.h:
+
+.././freertos-7-4-2/Source/include/queue.h:
+
+.././config/conf_timeProtocol.h:
+
+../time/timeManager.h:
+
+../time/internalClock/internalClock.h:
+
+../clp/clp.h:
+
+../clp/clp_api.h:
+
+../clp/clp_api_ext.h:
+
+.././network/channelradio.h:
+
+.././network/channel.h:
+
+.././MxRadioRF2xx/MxRadio.h:
+
+.././MxRadioRF2xx/uracolib/board.h:
+
+.././MxRadioRF2xx/uracolib/const.h:
+
+.././MxRadioRF2xx/uracolib/../MxRadioCfg.h:
+
+.././MxRadioRF2xx/uracolib/at86rf231.h:
+
+.././MxRadioRF2xx/MxRadioCfg.h:
+
+.././MxRadioRF2xx/uracolib/radio.h:
+
+.././MxRadioRF2xx/uracolib/transceiver.h:
+
+.././MxRadioRF2xx/uracolib/board.h:

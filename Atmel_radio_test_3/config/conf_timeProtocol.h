@@ -13,18 +13,20 @@
 /* MACRO                                                                */
 /************************************************************************/
 //#define MASTERMODE 0
-//#define SLAVEMODE 2
-/*
+#define SLAVEMODE 2
+#define CHANNEL_RADIO 12
+
 #define MAX_SLAVE_CLOCK 10
-#define TIMESYNC 10
-#define TIMOUTSTATE 5000
-//#define TIMEDELAYREQUEST 10*TIMESYNC
+#define TIMESYNC 10000
+#define TIMEDELAYREQUEST 60000
 #define TIME_CORRECTION TIMESYNC*10
 #define MOYCORLENGTH 10
 #define Coef_Software_Correction 1
 #define VALUE_TIMER 1000
 
+#define _CLP_USE_EXTENSIONS_
+
 
 #define RTC_FREQ 32000
-*/
+
 #endif /* CONF_TIMEPROTOCOL_H_ */

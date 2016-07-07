@@ -5,11 +5,16 @@
  *  Author: MORAND Baptiste
  */ 
 #include "hmi.h"
+#include "conf_timeProtocol.h"
 /************************************************************************/
 /* GLOBAL                                                               */
 /************************************************************************/
 xQueueHandle uartQueue;
-Serial hmi(PA22,PA23);
+#ifdef MASTERMODE
+	Serial hmi(PA22,PA23);
+#else
+	Serial hmi(USBTX,USBRX);
+#endif
 /************************************************************************/
 /* FUNCTION                                                             */
 /************************************************************************/

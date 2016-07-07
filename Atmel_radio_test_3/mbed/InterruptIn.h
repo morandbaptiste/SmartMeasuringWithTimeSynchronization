@@ -81,7 +81,7 @@ public:
      */
     template<typename T>
     void rise(T* tptr, void (T::*mptr)(void)) {
-        _rise.attach(tptr, mptr);
+      _rise.attach(tptr, mptr);
         gpio_irq_set(&gpio_irq, IRQ_RISE, 1);
     }
 

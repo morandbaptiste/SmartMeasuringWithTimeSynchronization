@@ -132,7 +132,8 @@ HMI/hmi.d HMI/hmi.o: ../HMI/hmi.cpp ../HMI/hmi.h .././mbed/mbed.h \
  .././freertos-7-4-2/Source/include/mpu_wrappers.h \
  .././freertos-7-4-2/Source/include/task.h \
  .././freertos-7-4-2/Source/include/list.h \
- .././freertos-7-4-2/Source/include/queue.h
+ .././freertos-7-4-2/Source/include/queue.h \
+ .././config/conf_timeProtocol.h
 
 ../HMI/hmi.h:
 
@@ -479,3 +480,5 @@ HMI/hmi.d HMI/hmi.o: ../HMI/hmi.cpp ../HMI/hmi.h .././mbed/mbed.h \
 .././freertos-7-4-2/Source/include/list.h:
 
 .././freertos-7-4-2/Source/include/queue.h:
+
+.././config/conf_timeProtocol.h:

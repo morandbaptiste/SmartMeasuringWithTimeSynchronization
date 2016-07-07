@@ -2,6 +2,7 @@
 #include <utask.h>
 #include <hmi.h>
 #include <conf_timeProtocol.h>
+#include <ppsGPS.h>
 
 
 
@@ -10,8 +11,13 @@
 int main()
 {
 	system_interrupt_disable_global();
+
 	//configureHMI 
 	configureHMI();
+    //RTC configure
+   configureInternalClock();
+    //configure external intrerrupt for pps
+    configurationPPS();
     //create your task
     kernelConfig();
     //demask global interrupt

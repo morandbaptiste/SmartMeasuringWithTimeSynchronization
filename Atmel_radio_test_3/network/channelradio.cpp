@@ -86,7 +86,7 @@ void ChannelRadio::putc(uint8_t c)
 	radio.write(c);
 	radio.endTransmission();
 	
-	vTaskDelay(2/portTICK_RATE_MS);
+	vTaskDelay(5/portTICK_RATE_MS);
 //	while(transmit){}
 }
 

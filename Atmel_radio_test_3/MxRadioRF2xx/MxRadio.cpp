@@ -44,7 +44,7 @@ cMxRadio::~cMxRadio()
 }
 // empty constructor, should not be called by user
 cMxRadio::cMxRadio(PinName mosi, PinName miso, PinName sclk, PinName cs, PinName rst, PinName slp, PinName irq)
-:m_spi(mosi, miso, sclk), m_cs(cs), reset_pin(rst), sleep_pin(slp),irq_pin(irq)
+:m_spi(mosi, miso, sclk), m_cs(cs), reset_pin(rst), sleep_pin(slp)//,irq_pin(irq)
 {
 	// default event handlers
 	

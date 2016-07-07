@@ -2,9 +2,25 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+clp\clp_api.cpp
+
+clp\clp_api_ext.cpp
+
+clp\crc.cpp
+
+clp\endian.cpp
+
 HMI\hmi.cpp
 
 SmartMeater\SmartMeter.cpp
+
+time\internalClock\internalClock.cpp
+
+time\ppsGPS\ppsGPS.cpp
+
+time\timeManager.cpp
+
+time\TimeProtocol\timeProtocol.cpp
 
 uTask\utask.cpp
 

@@ -141,9 +141,13 @@ uTask/utask.d uTask/utask.o: ../uTask/utask.cpp ../uTask/utask.h \
  .././freertos-7-4-2/Source/include/mpu_wrappers.h \
  .././freertos-7-4-2/Source/include/semphr.h \
  .././freertos-7-4-2/Source/include/queue.h \
+ ../time/TimeProtocol/timeProtocol.h ../HMI/hmi.h \
  .././freertos-7-4-2/Source/include/task.h \
  .././freertos-7-4-2/Source/include/list.h \
- .././config/conf_timeProtocol.h
+ .././freertos-7-4-2/Source/include/queue.h \
+ .././config/conf_timeProtocol.h ../time/timeManager.h \
+ ../time/internalClock/internalClock.h ../clp/clp.h ../clp/clp_api.h \
+ ../clp/clp_api_ext.h
 
 ../uTask/utask.h:
 
@@ -517,8 +521,24 @@ uTask/utask.d uTask/utask.o: ../uTask/utask.cpp ../uTask/utask.h \
 
 .././freertos-7-4-2/Source/include/queue.h:
 
+../time/TimeProtocol/timeProtocol.h:
+
+../HMI/hmi.h:
+
 .././freertos-7-4-2/Source/include/task.h:
 
 .././freertos-7-4-2/Source/include/list.h:
 
+.././freertos-7-4-2/Source/include/queue.h:
+
 .././config/conf_timeProtocol.h:
+
+../time/timeManager.h:
+
+../time/internalClock/internalClock.h:
+
+../clp/clp.h:
+
+../clp/clp_api.h:
+
+../clp/clp_api_ext.h:

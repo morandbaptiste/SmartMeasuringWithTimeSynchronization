@@ -61,7 +61,7 @@ private:
 	DigitalOut sleep_pin;
 
 protected:
-	InterruptIn irq_pin;
+	//InterruptIn irq_pin;
 private:
 	 uint8_t rxFrameBuffer[ZR_RXFRMBUFF_SIZE];
 	 uint8_t rxRingBuffer[ZR_FIFO_SIZE];
@@ -247,7 +247,7 @@ private:
 	         return crc;
 	     }
 
-	void rf_irq_callback();
+//	void rf_irq_callback();
 
 	//rf230.cpp
 	void radio_error(radio_error_t err);
@@ -266,6 +266,7 @@ private:
 
 
 public:
+	void rf_irq_callback();
 	cMxRadio(PinName mosi, PinName miso, PinName sclk, PinName cs, PinName rst, PinName slp, PinName irq);
 	~cMxRadio();
 	void begin(channel_t);
