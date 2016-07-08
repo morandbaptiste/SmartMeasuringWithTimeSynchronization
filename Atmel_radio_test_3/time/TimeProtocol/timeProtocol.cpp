@@ -29,15 +29,12 @@ void correction(void){
 	
 
 	if(xTaskGetTickCount()-saveCorrection>(TIME_CORRECTION/portTICK_RATE_MS)){
-			
 			if(timeProt.correction.nbCorrection>2){
 				saveCorrection=xTaskGetTickCount();
 				if(!hardwareCorrection()){
 					sofwareCorrection();
 				}
-			}
-			
-		
+			}		
 	}
 	
 }

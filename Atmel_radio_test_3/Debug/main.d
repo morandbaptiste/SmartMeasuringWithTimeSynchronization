@@ -147,7 +147,8 @@ main.d main.o: .././main.cpp .././mbed/mbed.h .././mbed/platform.h \
  .././config/conf_timeProtocol.h ../time/timeManager.h \
  ../time/internalClock/internalClock.h ../clp/clp.h ../clp/clp_api.h \
  ../clp/clp_api_ext.h ../time/ppsGPS/ppsGPS.h \
- .././mbed/InterruptManager.h .././mbed/CallChain.h
+ .././mbed/InterruptManager.h .././mbed/CallChain.h ../wdt/wdt_config.h \
+ ../wdt/wdt.h
 
 .././mbed/mbed.h:
 
@@ -548,3 +549,7 @@ main.d main.o: .././main.cpp .././mbed/mbed.h .././mbed/platform.h \
 .././mbed/InterruptManager.h:
 
 .././mbed/CallChain.h:
+
+../wdt/wdt_config.h:
+
+../wdt/wdt.h:

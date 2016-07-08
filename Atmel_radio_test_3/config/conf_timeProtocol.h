@@ -12,8 +12,8 @@
 /************************************************************************/
 /* MACRO                                                                */
 /************************************************************************/
-//#define MASTERMODE 0
-#define SLAVEMODE 2
+#define MASTERMODE 0
+//#define SLAVEMODE 2
 #define CHANNEL_RADIO 12
 
 #define MAX_SLAVE_CLOCK 10
