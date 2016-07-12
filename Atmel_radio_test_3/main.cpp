@@ -3,7 +3,7 @@
 #include <hmi.h>
 #include <conf_timeProtocol.h>
 #include <ppsGPS.h>
-#include <wdt_config.h>
+
 
 
 
@@ -11,11 +11,9 @@
 int main()
 {
 	system_interrupt_disable_global();
-	
+
 	//configureHMI 
 	configureHMI();
-	//wdt cofnig
-	wdt_config();
     //RTC configure
    configureInternalClock();
     //configure external intrerrupt for pps

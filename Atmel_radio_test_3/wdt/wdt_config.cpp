@@ -5,6 +5,7 @@
  *  Author: Time Syn Project
  */ 
 #include "wdt_config.h"
+uint8_t clearRCrash;
 void wdt_config(void){
 	//GCLK->CLKCTRL.reg=0x4204;
 	/* Create a new configuration structure for the Watchdog settings and fill
@@ -27,7 +28,7 @@ void wdt_config(void){
 
 	/* Initialize and enable the Watchdog with the user settings */
 	//! [setup_4]
-	wdt_set_config(&config_wdt);
+//	wdt_set_config(&config_wdt);
 	//! [setup_4]	
 	//hmi.printf("config wdt\r\n");
 	
@@ -36,6 +37,5 @@ void wdt_config(void){
 }
 void wdt_clear(void){
 	wdt_reset_count();
-	
 	
 }

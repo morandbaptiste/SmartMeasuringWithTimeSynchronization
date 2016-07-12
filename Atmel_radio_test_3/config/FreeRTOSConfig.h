@@ -57,7 +57,7 @@ void assert_triggered( const char * file, uint32_t line );
 
 
 #define configUSE_PREEMPTION                    0
-#define configUSE_IDLE_HOOK                     1
+#define configUSE_IDLE_HOOK                     0
 #define configUSE_TICK_HOOK                     0
 #define configPRIO_BITS                         2
 #define configCPU_CLOCK_HZ                      ( system_gclk_gen_get_hz(GCLK_GENERATOR_0) )

@@ -304,7 +304,9 @@ size_t CLP_GeneratePacket(uint8_t* buffer, const uint8_t* data, size_t datalengt
   length = CLP_GenerateEscape(buffer + 1, length);
 
   buffer[length + 2] = CLP_ESCAPE_ETX;
-  (*(uint16_t*)&buffer[length]) = _byteswap_ushort(crc);
+  buffer[length] = crc & 255;
+  buffer[length+1] = (crc >> 8) & 255;
+ //(*(uint16_t*)&buffer[length]) = _byteswap_ushort(crc);
   length += 3;
 
   return length;

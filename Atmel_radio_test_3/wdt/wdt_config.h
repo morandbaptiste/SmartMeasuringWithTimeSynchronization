@@ -13,7 +13,7 @@
 //#include <hmi.h>
 //#include <mbed.h>
 
-
+extern uint8_t clearRCrash;
 
 void wdt_config(void);
 #ifdef __cplusplus

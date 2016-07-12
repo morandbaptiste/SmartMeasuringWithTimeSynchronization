@@ -24,12 +24,6 @@ time\TimeProtocol\timeProtocol.cpp
 
 uTask\utask.cpp
 
-wdt\iddle.c
-
-wdt\wdt.c
-
-wdt\wdt_config.cpp
-
 freertos-7-4-2/Source/queue.c
 
 freertos-7-4-2/Source/croutine.c

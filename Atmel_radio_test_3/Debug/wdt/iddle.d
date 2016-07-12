@@ -72,7 +72,14 @@ wdt/iddle.d wdt/iddle.o: ../wdt/iddle.c ../wdt/wdt_config.h ../wdt/wdt.h \
  .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/common/utils/interrupt/interrupt_sam_nvic.h \
  .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/TARGET_SAM_CortexM0P/drivers/system/clock/clock.h \
  .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/TARGET_SAM_CortexM0P/drivers/system/clock/gclk.h \
- .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/TARGET_SAM_CortexM0P/drivers/system/clock/TARGET_SAMR21/clock_feature.h
+ .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/TARGET_SAM_CortexM0P/drivers/system/clock/TARGET_SAMR21/clock_feature.h \
+ .././freertos-7-4-2/Source/include/FreeRTOS.h \
+ .././freertos-7-4-2/Source/include/projdefs.h \
+ .././config/FreeRTOSConfig.h \
+ .././freertos-7-4-2/Source/include/portable.h \
+ .././freertos-7-4-2/Source/portable/GCC/ARM_CM0/portmacro.h \
+ .././freertos-7-4-2/Source/include/mpu_wrappers.h \
+ .././config/conf_timeProtocol.h
 
 ../wdt/wdt_config.h:
 
@@ -227,3 +234,17 @@ wdt/iddle.d wdt/iddle.o: ../wdt/iddle.c ../wdt/wdt_config.h ../wdt/wdt.h \
 .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/TARGET_SAM_CortexM0P/drivers/system/clock/gclk.h:
 
 .././mbed/TARGET_SAMR21G18A/TARGET_Atmel/TARGET_SAM_CortexM0P/drivers/system/clock/TARGET_SAMR21/clock_feature.h:
+
+.././freertos-7-4-2/Source/include/FreeRTOS.h:
+
+.././freertos-7-4-2/Source/include/projdefs.h:
+
+.././config/FreeRTOSConfig.h:
+
+.././freertos-7-4-2/Source/include/portable.h:
+
+.././freertos-7-4-2/Source/portable/GCC/ARM_CM0/portmacro.h:
+
+.././freertos-7-4-2/Source/include/mpu_wrappers.h:
+
+.././config/conf_timeProtocol.h:

@@ -32,12 +32,14 @@ void PrintBuffer(Channel* c, char* buffer, size_t length=0)
 
 //extern xSemaphoreHandle timeProt.synchroTimeReceive;
 
+Channel* pc = NULL;
+
 void smartMeterTask(void){
 	
 	xSemaphoreHandle synchroSmartMeter;
 	vSemaphoreCreateBinary(synchroSmartMeter);
 	
-	Channel* pc = new ChannelSerialDebug;
+	/*Channel* */pc = new ChannelSerialDebug;
 	Channel* s1 = new ChannelSerialSercom1;
 	ChannelCallback* relaytos1 = new Relay(s1);
 	ChannelCallback* relaytopc = new Relay(pc);

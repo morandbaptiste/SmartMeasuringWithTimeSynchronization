@@ -19,10 +19,17 @@ uint32_t  readClock(Clock* timeClock){
 	//rtc_count_disable(&rtc_instance);
 //	Disable_global_interrupt();
 	uint32_t timeCounter=0;
+	float prop=(float)(RTC->MODE0.COMP[0].reg/(VALUE_TIMER*1.0));
 	RTC->MODE0.CTRL.reg &=  0b1111111111111101;//disable timer
 	while(RTC->MODE0.STATUS.bit.SYNCBUSY==1);
 	
 	timeCounter=RTC->MODE0.COUNT.reg; 
+
+	float valAdd=(float)timeCounter*prop*1.0;
+	timeCounter=(int)valAdd;
+	if(valAdd-timeCounter>0.5){
+		timeCounter++;
+	}
 	timeClock->second=timeManage.second;	
 	timeClock->halfmillis=timeManage.halfmillis;	
 	//timeCounter=0;
@@ -42,14 +49,16 @@ void writeClock(Clock clk){
 
 	RTC->MODE0.CTRL.reg &=  0b1111111111111101;//stop timer
 	
-	while(RTC->MODE0.STATUS.bit.SYNCBUSY==1);
-	RTC->MODE0.COUNT.reg=clk.halfmillis%VALUE_TIMER;
+
+	RTC->MODE0.COUNT.reg=clk.halfmillis%RTC->MODE0.COMP[0].reg;
+
 	timeManage.second=clk.second;
-	timeManage.halfmillis=(int)(clk.halfmillis/VALUE_TIMER)*VALUE_TIMER;
+	timeManage.halfmillis=(int)(clk.halfmillis/RTC->MODE0.COMP[0].reg)*RTC->MODE0.COMP[0].reg;
+	
 	timeManage.second+=timeManage.halfmillis/RTC_FREQ;
 	timeManage.halfmillis=timeManage.halfmillis%RTC_FREQ;
 	RTC->MODE0.CTRL.reg |= RTC_MODE0_CTRL_ENABLE; //enable timer
-
+	//hmi.printf("register : %d",RTC->MODE0.COUNT.reg);
 	
 
 	
@@ -57,6 +66,7 @@ void writeClock(Clock clk){
 }
 void isrInternalClok(void){
 			Disable_global_interrupt();
+			RTC->MODE0.CTRL.reg &=  0b1111111111111101;//stop timer
 			//printf("+");
 			static bool state;
 			
@@ -109,8 +119,9 @@ void isrInternalClok(void){
 			}
 			
 
-			
+	RTC->MODE0.CTRL.reg |= RTC_MODE0_CTRL_ENABLE; //enable timer
 	Enable_global_interrupt();
+	//hmi.printf("ISR");
 }
 void RTC_Handler( void ){
 	//pc.printf("ISR");

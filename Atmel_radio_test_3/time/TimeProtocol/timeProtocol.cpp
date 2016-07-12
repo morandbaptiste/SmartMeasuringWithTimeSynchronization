@@ -29,12 +29,15 @@ void correction(void){
 	
 
 	if(xTaskGetTickCount()-saveCorrection>(TIME_CORRECTION/portTICK_RATE_MS)){
+			
 			if(timeProt.correction.nbCorrection>2){
 				saveCorrection=xTaskGetTickCount();
 				if(!hardwareCorrection()){
 					sofwareCorrection();
 				}
-			}		
+			}
+			
+		
 	}
 	
 }
@@ -182,7 +185,6 @@ void sofwareCorrection(){
 		sendHMI(messageHMICor);
 		sendHMI("	end Software correction");
 	}
-	
 }
 
 
@@ -201,6 +203,45 @@ void resetSofftwareCorrection(void){
 		timeProt.correction.sumTime.second=0;
 		timeProt.correction.sumTime.halfmillis=0;
 		timeProt.correction.currentTimeOffsetSync.second=0;// to not take the first value
+}
+
+extern Channel* pc;
+
+void report(Clock offset){
+	uint8_t i;
+	
+	uint8_t buffer[100];
+	uint8_t send[CLP_UTILITY_MAX_PACKET_SIZE];
+	buffer[0] = 'V';
+	#ifdef MASTERMODE
+		buffer[1] = 1;
+	#else
+		buffer[1] = 2;
+	#endif
+	//data
+	long int time= offset.second*32000+offset.halfmillis;
+	buffer[2]=(uint8_t)(time&0x00FF);
+	buffer[3]=(uint8_t)((time>>8)&0x00FF);
+	buffer[4]=(uint8_t)((time>>16)&0x00FF);
+	buffer[5]=(uint8_t)((time>>24)&0x00FF);
+	
+	size_t length = CLP_GeneratePacket(send, buffer, 6);
+	ChannelRadio* radio = ChannelRadio::GetChannel();
+
+	#ifdef MASTERMODE
+
+		for(i=0;i<length;i++){
+			pc->putc(send[i]);
+		}
+	#else
+		for(i=0;i<length;i++){
+			radio->putc(send[i]);
+		}
+	#endif
+	
+	
+	
+	
 }
 bool hardwareCorrection(void){
 	if(timeProt.correction.nbCorrection!=0){
@@ -442,7 +483,21 @@ void updateClock(void){
 		
 		timeCopy=sumClock(timeCopy,timeProt.offset);//add offset
 		writeClock(timeCopy);
-		
+		uint8_t state;
+		state=stateLed;
+		report(timeProt.offset);
+		if(timeManage.halfmillis<(RTC_FREQ/2)){//all 500ms
+			stateLed=LOW;
+		}
+		else{
+			stateLed=HIGH;
+		}
+		if(state!=stateLed){
+			led = stateLed;
+			//	if(synchroLed!=NULL){
+			//		xSemaphoreGiveFromISR( synchroLed,NULL);
+			//	}
+		}
 		if(timeProt.offset.sign==true){
 			sprintf(messageHMIOffset,"		update clock offset: +%lus,%ld[+%lus,%lu ms,~%lu us]	t: %lu,%lu",timeProt.offset.second,(long unsigned int)timeProt.offset.halfmillis,timeProt.offset.second,timeProt.offset.halfmillis/32,(timeProt.offset.halfmillis%32)*31,timeCopy.second,timeCopy.halfmillis);
 		}
